@@ -14,6 +14,7 @@ logger.timestamp = false;
     try {
         // Remove current build
         await remove('./dist/');
+        await exec("echo CDN_TOKEN=$CDN_TOKEN > ./src/pre-start/env/production.env", './')
         // Copy production env file
         await copy('./src/pre-start/env/production.env', './dist/pre-start/env/production.env');
         // Copy back-end files
