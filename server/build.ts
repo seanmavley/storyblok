@@ -16,6 +16,7 @@ logger.timestamp = false;
         await remove('./dist/');
         await exec("mkdir -p ./src/pre-start/env/", './')
         await exec("echo CDN_TOKEN=$CDN_TOKEN > ./src/pre-start/env/production.env", './')
+        await exec("echo MAPI_TOKEN=$MAPI_TOKEN >> ./src/pre-start/env/production.env", './')
         // Copy production env file
         await copy('./src/pre-start/env/production.env', './dist/pre-start/env/production.env');
         // Copy back-end files
