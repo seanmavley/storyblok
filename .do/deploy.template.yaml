@@ -1,0 +1,17 @@
+spec:
+  name: storyblok-frontend-sample
+  services:
+  - name: web
+    git:
+      branch: master
+      repo_clone_url: https://github.com/seanmavley/storyblok
+    envs:
+    - key: VUE_APP_SERVER_URL
+      value: "[same-as-url-for-the-deployed-server/api]"
+      type: SECRET
+    - key: CDN_TOKEN
+      value: "[only applicable for the server deploy - Get token from storyblok]"
+      type: SECRET
+    - key: MAPI_TOKEN
+      value: "[only applicable for the server deploy - Get token from storyblok]"
+      type: SECRET

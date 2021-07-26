@@ -27,3 +27,9 @@ Open https://storyblokfrontend-xwemo.ondigitalocean.app/
 - `npm install`
 - `npm run start:dev`
 - Go to `localhost:3000/api` in browser
+
+# One-click Deploy to DO App Platform
+
+This repository contains both the frontend and server codes. Thus, you will have to click this button below twice, and select the folder directory of choice during the final deploy steps.
+
+[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/seanmavley/storyblok/tree/master)
