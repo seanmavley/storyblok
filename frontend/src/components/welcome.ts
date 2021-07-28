@@ -23,8 +23,16 @@ export default class Welcome extends Vue {
     }
 
     this.busy = true;
-    this.getSpaceId();
-  }
+    // this.getSpaceId();
+    axios.post(`${API_URL}/initiate`, this.formData)
+      .then((res: any) => {
+        console.log(res);
+      })
+      .catch((err: any) => {
+        console.log(err);
+        this.message = this.error_message;
+      }) 
+   }
 
   getSpaceId() {
     axios.get(`${API_URL}/space`)
